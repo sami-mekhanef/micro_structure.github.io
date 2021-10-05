@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Micro Structure</title>
+</head>
+<body>
+
+<center>
+<img src='micro-struct.png' alt='micro-struct.png' width='50%' height='50%'>
+
+<div>
+
+    <br><br><br>
+
+        <table>
+            <tr>
+                <td colspan=22 style="background-color : green; text-align : center;"><b>--- Choisir les valeurs des registres ---</b></td>
+            </tr>
+            <tr>
+                <td colspan=2 style="background-color : green; text-align : right;"><b>A = </b></td>
+                <td colspan=3><input type='text' placeholder='Entrer la valeur du registre A' minlength="1"></td>
+                <td colspan=2 style="background-color : green; text-align : right;"><b>B = </b></td>
+                <td colspan=3><input type='text' placeholder='Entrer la valeur du registre B' minlength="1"></td>
+                <td colspan=2 style="background-color : green; text-align : right;"><b>C = </b></td>
+                <td colspan=3><input type='text' placeholder='Entrer la valeur du registre C' minlength="1"></td>
+                <td colspan=2 style="background-color : green; text-align : right;"><b>D = </b></td>
+                <td colspan=3><input type='text' placeholder='Entrer la valeur du registre D' minlength="1"></td>
+                <td colspan=2 style="background-color : green;"></td>
+            </tr>
+            <tr>
+                <td colspan=22 style="background-color : green; text-align : center;"><b>-- Choisir les signaux --</b></td>
+            </tr>
+            <tr>
+                <td><button>Signal 1</button></td>
+                <td><button>Signal 2</button></td>
+                <td><button>Signal 3</button></td>
+                <td><button>Signal 4</button></td>
+                <td><button>Signal 5</button></td>
+                <td><button>Signal 6</button></td>
+                <td><button>Signal 7</button></td>
+                <td><button>Signal 8</button></td>
+                <td><button>Signal 9</button></td>
+                <td><button>Signal 10</button></td>
+                <td><button>Signal 11</button></td>
+                <td><button>Signal 12</button></td>
+                <td><button>Signal 13</button></td>
+                <td><button>Signal 14</button></td>
+                <td><button>Signal 15</button></td>
+                <td><button>Signal 16</button></td>
+                <td><button>Signal 17</button></td>
+                <td><button id="goto">Signal 18</button></td>
+                <td><button>Signal 19</button></td>
+                <td><button>Signal 20</button></td>
+                <td><button>Signal 21</button></td>
+                <td><button>Signal 22</button></td>
+            </tr>
+            <tr>
+                <td colspan=22 style="background-color : green; text-align : center;"><b>- MICRO INSTRUCTION -</b></td>
+            </tr>
+            <tr colspan=22 style="text-align : center;">
+                <td colspan=6 style="background-color : yellow;"><span>PHASE 1</span></td>
+                <td colspan=2 style="background-color : white;"><span>UAL</span></td>
+                <td colspan=6 style="background-color : green;"><span>PHASE 2</span></td>
+                <td colspan=2 style="background-color : blue;"><span>PHASE 3</span></td>
+                <td colspan=6 style="background-color : purple;"><span>PHASE 4</span></td>
+            </tr>
+            <tr style="text-align : center; background-color : white;">
+                <td style="background-color : yellow;">1</td>
+                <td style="background-color : yellow;">2</td>
+                <td style="background-color : yellow;">3</td>
+                <td style="background-color : yellow;">4</td>
+                <td style="background-color : yellow;">5</td>
+                <td style="background-color : yellow;">6</td>
+                <td style="background-color : white;">7</td>
+                <td style="background-color : white;">8</td>
+                <td style="background-color : green;">9</td>
+                <td style="background-color : green;">10</td>
+                <td style="background-color : green;">11</td>
+                <td style="background-color : green;">12</td>
+                <td style="background-color : green;">13</td>
+                <td style="background-color : green;">14</td>
+                <td style="background-color : blue;">15</td>
+                <td style="background-color : blue;">16</td>
+                <td style="background-color : purple;">17</td>
+                <td style="background-color : purple;">18</td>
+                <td style="background-color : purple;">19</td>
+                <td style="background-color : purple;">20</td>
+                <td style="background-color : purple;">21</td>
+                <td style="background-color : purple;">22</td>
+            </tr>
+
+            <tr style="text-align : center;">
+                <td style="background-color : yellow;"><span>0</span></td>
+                <td style="background-color : yellow;"><span>0</span></td>
+                <td style="background-color : yellow;"><span>0</span></td>
+                <td style="background-color : yellow;"><span>0</span></td>
+                <td style="background-color : yellow;"><span>0</span></td>
+                <td style="background-color : yellow;"><span>0</span></td>
+                <td style="background-color : white;"><span>0</span></td>
+                <td style="background-color : white;"><span>0</span></td>
+                <td style="background-color : green;"><span>0</span></td>
+                <td style="background-color : green;"><span>0</span></td>
+                <td style="background-color : green;"><span>0</span></td>
+                <td style="background-color : green;"><span>0</span></td>
+                <td style="background-color : green;"><span>0</span></td>
+                <td style="background-color : green;"><span>0</span></td>
+                <td style="background-color : blue;"><span>0</span></td>
+                <td style="background-color : blue;"><span>0</span></td>
+                <td style="background-color : purple;"><span>0</span></td>
+                <td style="background-color : purple;"><span>0</span></td>
+                <td style="background-color : purple;"><span>0</span></td>
+                <td style="background-color : purple;"><span>0</span></td>
+                <td style="background-color : purple;"><span>0</span></td>
+                <td style="background-color : purple;"><span>0</span></td>
+            </tr>
+
+            <tr style="background-color : red;">
+                <td colspan=2><b>A = </b><span value=0>0</span></td>
+                <td colspan=2><b>B = </b><span value=O>0</span></td>
+                <td colspan=2><b>C = </b><span value=0>0</span></td>
+                <td colspan=2><b>D = </b><span value=0>0</span></td>
+                <td colspan=2><b>MPC = </b><span value=0>0</span></td>
+                <td colspan=2><b>MIR = </b><span value=0>0</span></td>
+                <td colspan=2><b>MDR = </b><span value=0>0</span></td>
+                <td colspan=2><b>MAR = </b><span value=0>0</span></td>
+                <td colspan=2><b>Bus 1 = </b><span value=0>0</span></td>
+                <td colspan=2><b>Bus 2 = </b><span value=0>0</span></td>
+                <td colspan=2><b>Bus 3 = </b><span value=0>0</span></td>
+            </tr>
+        </table>
+
+        <br>
+
+        <button type="submit" id='start-instruction'> Lancer l'instruction </button>
+        <button id="ok">dev check !</button>
+
+</div>
+
+</center>
+
+
+<script>
+    $( document ).ready(function() {
+
+        //CORRIGER LE PUTIN DE PB DU -1 
+        //ET FAUT AUSSI TOUT FOUTRE EN INT TANT QU'À FAIRE
+
+        $("#ok").on('click', function(){ //de 51  à 71
+            // console.log($('table tr').children());
+            // console.log($('table tr').children().eq(51).text(1));
+            console.log($('input[type="text"]'));
+        });
+
+        //initialisation
+
+        var struct = [];
+        for(let i =0; i<22; i++){
+            struct.push(0);
+        }
+
+        var register_A = 0;
+        var register_B = 0;
+        var register_C = 0;
+        var register_D = 0;
+
+        var MPC = 0;
+        var MIR = 0;
+        
+        var MDR = 2;
+
+        var bus_1 = 0;
+        var bus_2 = 0;
+        var bus_3 = 0;
+        
+        var signal_22_activated = false;
+
+        function between_numbers(i, tab){
+            for(let j=0; j<tab.length; j++){
+                if(i==tab[j]){
+                    return j; 
+                }
+            }
+            return -1;
+        }
+
+
+        for(let i=0; i<22; i++){
+            $('table button').eq(i).on('click', function(){
+
+                if(struct[i]==1){
+                    struct[i]=0;
+                }
+                else{
+                    if (!signal_22_activated){
+                        if(between_numbers(i, [0,1,2,3])!=-1){
+                        //alert(between_numbers(i, [0,1,2,3]));
+                            if((struct.slice(0,4).indexOf(1) >= 0)){
+                                struct[struct.slice(0,4).indexOf(1)] = 0;
+                            }
+
+                            struct[i] = 1;
+                        }
+
+                        else if(between_numbers(i, [4,5])!=-1){
+                            if((struct.slice(4,6).indexOf(1) >= 0)){
+                                struct[struct.slice(4,6).indexOf(1)+4] = 0;
+                            }
+
+                            struct[i] = 1;
+                        }
+                    }
+                    else{
+                        struct[i] = 1;
+                    }
+
+                    if(between_numbers(i, [16,17,18,19])!=-1){
+                        if((struct.slice(16,20).indexOf(1) >= 0)){
+                            struct[struct.slice(16,20).indexOf(1)+16] = 0;
+                        }
+
+                        struct[i] = 1;
+                    }
+
+                    else{
+                        struct[i] = 1;
+                    }
+                    
+            }
+
+            for(let i=0; i<22; i++){
+                $('table tr').children().eq(i+(61)).text(struct[i]);
+            }
+
+            //console.log('structure = '+struct);
+            });
+        }
+
+        //cas special des 10 premiers bits représenté par les 10 premières adresses du tableau "struct"
+
+
+        //REGLER LE PB DE GOTO QUI PERMET DE SELECTIONNER EN DEHORS DES 10 PREMIERS BITS
+        $('#goto').on('click', function(){
+            if(struct[17] == 1){
+                signal_22_activated = true;
+            }
+            else{
+                signal_22_activated = false;
+            }
+
+            for(let k =0; k<10; k++){
+                struct[k]=0;
+            }
+
+            for(let i=0; i<22; i++){
+                $('table tr').children().eq(i+(61)).text(struct[i]);
+            }
+
+            //console.log('struct 18 = '+struct);
+        });
+
+        //Lancement de l'instruction
+        $('#start-instruction').on('click', function(){
+
+
+                //Initialisation
+
+                if($('input[type="text"]').eq(0).val()!=''){
+                    register_A = $('input[type="text"]').eq(0).val();
+                    $('input[type="text"]').eq(0).val('');
+                }
+                if($('input[type="text"]').eq(1).val()!=''){
+                    register_B = $('input[type="text"]').eq(1).val();
+                    $('input[type="text"]').eq(1).val('');
+                }
+                if($('input[type="text"]').eq(2).val()!=''){
+                    register_C = $('input[type="text"]').eq(2).val();
+                    $('input[type="text"]').eq(2).val('');
+                }
+                if($('input[type="text"]').eq(3).val()!=''){
+                    register_D = $('input[type="text"]').eq(3).val();
+                    $('input[type="text"]').eq(4).val('');
+                }
+
+                // $('input[type="text"]').each(function() {
+                //     console.log($(this).val());
+                //     if ($(this).val() != "") {
+                //         $(this).val(0);
+                //     }
+                // });
+                // console.log(true);
+                // console.log($('table tr').children().eq(2).text(1));
+                // console.log($('table tr').children().eq(2).text(1));
+                // console.log($('table tr').children().eq(2).text(1));
+                // console.log($('table tr').children().eq(2).text(1));
+
+
+
+                //PHASE 1 START
+
+                if(struct[0]==1){
+                    bus_2 = register_A;
+                }
+                else if(struct[1]==1){
+                    bus_2 = register_B;
+                }
+                else if(struct[2]==1){
+                    bus_2 = register_C;
+                }
+                else if(struct[3]==1){
+                    bus_2 = register_D;
+                }
+                else{
+                    bus_2 = 0;
+                }
+                console.log('PHASE 1 BUS_2 = '+bus_2);
+                $('table tr').children().eq(92).text('Bus 2 = '+bus_2);
+
+                if(struct[4]==1){
+                    bus_1 = 1;
+                }
+                else if(struct[5]==1){
+                    bus_1 = MDR;
+                }
+                else{
+                    bus_1 = 0;
+                }
+
+                $('table tr').children().eq(91).text('Bus 1 = '+bus_1);
+
+                console.log('PHASE 1 BUS_1 = '+bus_1);
+                //PHASE 1 END
+                //UAL START
+
+                calc_UAL(bus_1, bus_2); //Initialise le 3ème bus
+                $('table tr').children().eq(93).text('Bus 3 = '+bus_3);
+                console.log('UAL BUS_3 = '+bus_3);
+                //UAL END
+                //PHASE 2 START
+
+                if(struct[12]==1){
+                    MDR = bus_3;
+                    $('table tr').children().eq(89).text('MDR = '+MDR);
+                }
+                if(struct[11]==1){
+                    register_D = bus_3;
+                    $('table tr').children().eq(86).text('D = '+register_D);
+                }
+                if(struct[10]==1){
+                    register_C = bus_3;
+                    $('table tr').children().eq(85).text('C = '+register_C);
+                }
+                if(struct[9]==1){
+                    register_B = bus_3;
+                    $('table tr').children().eq(84).text('B = '+register_B);
+                }
+                if(struct[8]==1){
+                    register_A = bus_3;
+                    $('table tr').children().eq(83).text('A = '+register_A);
+                }
+                console.log('PHASE 2 - A = '+register_A+'\nB = '+register_B+'\nC = '+register_C+'\nD = '+register_D+'\nMDR = '+MDR+'\n');
+
+                /*PHASE 2 END
+                PHASE 3 START
+                    Ces phases sont skip car pas très utiles pour les exos donnés
+                PHASE 3 END*/
+                //PHASE 4 START
+
+                if(struct[16]==1){
+                    bus_1 = 1;
+                }
+                else if(struct[17]==1){
+                    var str_banary = '';
+                    for(let j=0; j<10; j++){
+                        str_banary += struct[j];
+                    } 
+                     var bus_1 = parseInt(str_banary, 2);
+                }
+                else if(struct[18]==1){
+                    if(register_A==null){ // Un peu nul, il faudrait le changer
+                        alert('A est null');
+                    }
+                    else if(register_A==0){
+                        bus_1 = 1;
+                    }
+                    else{
+                        bus_1 = 2;
+                    }
+                }
+
+                else if(struct[19]==1){
+                    if(register_A==null){ // Un peu nul, il faudrait le changer
+                        alert('A est null');
+                    }
+                    else if(register_A<0){
+                        bus_1 = 1;
+                    }
+                    else{
+                        bus_1 = 2;
+                    }
+                }
+
+                else{
+                    bus_1 = 0;
+                }
+
+                console.log('PHASE 4 BUS_1 = '+bus_1);
+
+                if(struct[21]==1){
+                    bus_2 = MPC;
+                }
+                else{
+                    bus_2 = 0;
+                }
+
+                console.log('PHASE 4 BUS_2 = '+bus_2);
+
+                bus_3 = bus_1 + bus_2;
+
+                //PHASE 4 END
+                //PHASE 5 START
+
+                MPC = bus_3;
+                $('table tr').children().eq(87).text('MPC = '+MPC);
+                console.log(MPC);
+                //PHASE 5 END
+
+            console.log('structure = '+struct);
+
+        });
+
+        function calc_UAL(bus_1, bus_2){
+            if(struct[6]==1){
+                if(bus_2!=0 && bus_1==0)
+                    bus_3 = -bus_2;
+                else
+                    struct[7]==1 ? bus_3 = ((Number(bus_2)-Number(bus_1)) * 2) : bus_3 = (Number(bus_2)-Number(bus_1));
+            }
+            else{
+                struct[7]==1 ? bus_3 = ((Number(bus_2)+Number(bus_1)) * 2) : bus_3 = (Number(bus_2)+Number(bus_1));
+            }
+        }
+
+        function refresh(){
+                $('table tr').children().eq(92).text('Bus 2 = '+bus_2);
+                $('table tr').children().eq(91).text('Bus 1 = '+bus_1);
+                $('table tr').children().eq(93).text('Bus 3 = '+bus_3);
+                $('table tr').children().eq(89).text('MDR = '+MDR);
+                $('table tr').children().eq(86).text('D = '+register_D);
+                $('table tr').children().eq(85).text('C = '+register_C);
+                $('table tr').children().eq(84).text('B = '+register_B);
+                $('table tr').children().eq(83).text('A = '+register_A);
+                $('table tr').children().eq(87).text('MPC = '+MPC);
+        }
+    });
+</script>
+
+	<style>
+        
+		html {
+   			margin: 0px;
+   			height: 100%;
+   			width: 100%;
+		}
+
+		body{
+			margin: 0px;
+			min-height: 100%;
+			width: 100%;
+			background : /*url('images/Map.png'),*/ #393A3C;
+			background-image: radial-gradient(circle at 1px 1px, black 1px, transparent 0);
+  			background-size: 40px 40px;
+		}
+
+        .registers{
+            width : 30%;
+            height : 10%;
+            position : absolute;
+            display : grid;
+            grid-template-columns : 1fr 1fr 1fr;
+            column-gap : 100px;
+            row-gap : 10px;
+        }
+
+        .registers span{
+            background-color : green;
+            border : solid white 3px;
+            text-align: center;
+        }
+
+        .addOne{
+            height : 10%;
+            margin-top : 20%;
+            margin-left: 3%;
+            position : absolute;
+            display : grid;
+            grid-template-columns : 1fr;
+            row-gap : 40px;
+        }
+
+        .program-memory{
+            width : 20%;
+            height : 10%;
+            margin-top : 10%;
+            margin-left : 11.2%;
+            position : absolute;
+            display : grid;
+            grid-template-columns : 1fr 1fr;
+            column-gap : 100px;
+            row-gap : 10px;
+        }
+
+        .program-memory span{
+            background-color : green;
+            border : solid white 3px;
+            text-align: center;
+        }
+
+	</style>
